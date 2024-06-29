@@ -7,7 +7,8 @@ app.get("/", (req, res) => {
 })
 
 
-
+const workoutsController = require("./controllers/workoutController");
+app.use("/workouts", workoutsController)
 
 
 
