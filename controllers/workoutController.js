@@ -22,4 +22,10 @@ router.get("/:id", (req, res) => {
     }
 })
 
+router.post("/", (req, res) => {
+    const newWorkout = { ...req.body, id: workouts.length + 1 };
+    workouts.push(newWorkout);
+    res.json(workouts[workouts.length -1]);
+  });
+
 module.exports = router;
